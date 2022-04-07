@@ -28,7 +28,7 @@ const Contact = () => {
             <input
               type='email'
               id='email'
-              name='name'
+              name='email'
               className={styles.red}
             />
           </div>
@@ -36,7 +36,7 @@ const Contact = () => {
             <label htmlFor='message'>Message</label>
             <textarea
               id='message'
-              name='name'
+              name='message'
               className={`${styles.blue} scrollbar`}
             />
           </div>
