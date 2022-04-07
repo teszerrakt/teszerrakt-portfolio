@@ -1,5 +1,5 @@
 import styles from './Landing.module.scss'
-import { BsChevronDoubleDown } from 'react-icons/all'
+import { BsChevronDoubleDown } from 'react-icons/bs'
 
 const Landing = () => {
   return (
