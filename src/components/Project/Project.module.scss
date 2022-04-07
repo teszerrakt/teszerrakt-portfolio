@@ -1,0 +1,19 @@
+.projectSection {
+  @apply flex justify-center w-screen;
+  @apply px-10;
+
+  .projectContainer {
+    @apply w-[64rem] py-10 border-t;
+    @apply text-left;
+
+    .title {
+      @apply  text-4xl font-bold pb-11;
+      @apply sm:text-6xl;
+    }
+
+    .cardContainer {
+      @apply grid grid-cols-1 gap-10;
+      @apply sm:grid-cols-2;
+    }
+  }
+}

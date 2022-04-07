@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-tz-black text-white font-fjalla;
+    @apply overflow-x-hidden;
+}
+
+.text-gradient {
+    color: transparent;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradient 10s ease infinite;
+}
+
+.bg-gradient {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+        @apply w-2 h-2;
+    }
+
+    .scrollbar::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        @apply bg-gradient-to-b from-tz-darkblue to-tz-lightblue;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+        @apply bg-gradient-to-b from-tz-red to-tz-orange;
+    }
+}

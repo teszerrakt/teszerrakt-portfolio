@@ -1,0 +1,10 @@
+.button {
+  @apply flex items-center justify-center;
+  @apply px-10 py-3 text-xl;
+  @apply duration-300 rounded-lg cursor-pointer;
+  @apply hover:border-2 hover:border-white;
+
+  .icon {
+    @apply mr-3 text-3xl;
+  }
+}

@@ -1,0 +1,26 @@
+.landingSection {
+  @apply flex flex-col items-center;
+  @apply justify-center h-screen;
+
+  .title {
+    @apply text-[15vw] font-bold;
+  }
+
+  .subTitle {
+    @apply text-[5vw];
+  }
+
+  .scrollDownContainer {
+    @apply absolute flex flex-col;
+    @apply items-center justify-center;
+    @apply mt-10 bottom-10 animate-pulse;
+
+    .text {
+      @apply mb-3;
+    }
+
+    .icon {
+      @apply text-4xl;
+    }
+  }
+}

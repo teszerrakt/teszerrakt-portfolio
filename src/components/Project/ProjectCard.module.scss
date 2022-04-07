@@ -1,0 +1,21 @@
+.projectCard {
+  @apply p-5 rounded-xl bg-tz-darkgray;
+  @apply hover:scale-110 duration-300;
+
+  .image {
+    @apply rounded-lg;
+  }
+
+  .title {
+    @apply pt-5 text-2xl font-bold;
+  }
+
+  .tags {
+    @apply pt-1 pb-5 text-tz-gray;
+  }
+
+  .btnContainer {
+    @apply grid grid-cols-1 gap-5;
+    @apply sm:grid-cols-2;
+  }
+}
