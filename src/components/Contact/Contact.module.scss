@@ -2,48 +2,51 @@
   @apply flex justify-center px-10;
   @apply text-left;
 
-  .contactForm {
-    @apply flex flex-col w-[64rem];
-    @apply py-10 border-t;
+  .contactContainer {
+    @apply w-[64rem] border-t;
 
     .title {
       @apply text-4xl font-bold pb-11;
-      @apply sm:text-6xl;
+      @apply pt-10 sm:text-6xl;
     }
 
-    .inputContainer {
-      @apply relative mb-4;
+    .contactForm {
+      @apply flex flex-col pb-10;
 
-      label {
-        @apply text-xl;
-      }
+      .inputContainer {
+        @apply relative mb-4;
 
-      input, textarea {
-        @apply w-full px-3 py-3;
-        @apply text-xl transition-colors duration-300;
-        @apply ease-in-out bg-tz-darkgray;
-        @apply border border-tz-gray rounded;
-        @apply outline-none focus:ring-2;
-
-        &.blue {
-          @apply focus:border-tz-darkblue focus:ring-tz-lightblue;
+        label {
+          @apply text-xl;
         }
 
-        &.red {
-          @apply focus:border-tz-orange focus:ring-tz-red;
+        input, textarea {
+          @apply w-full px-3 py-3;
+          @apply text-xl transition-colors duration-300;
+          @apply ease-in-out bg-tz-darkgray;
+          @apply border border-tz-gray rounded;
+          @apply outline-none focus:ring-2;
+
+          &.blue {
+            @apply focus:border-tz-darkblue focus:ring-tz-lightblue;
+          }
+
+          &.red {
+            @apply focus:border-tz-orange focus:ring-tz-red;
+          }
+        }
+
+        textarea {
+          @apply resize-none;
         }
       }
 
-      textarea {
-        @apply resize-none;
+      .btnSubmit {
+        @apply flex items-center justify-center;
+        @apply px-10 py-3 text-xl;
+        @apply rounded-lg cursor-pointer duration-300;
+        @apply hover:border-2 hover:border-white;
       }
-    }
-
-    .btnSubmit {
-      @apply flex items-center justify-center;
-      @apply px-10 py-3 text-xl;
-      @apply rounded-lg cursor-pointer duration-300;
-      @apply hover:border-2 hover:border-white;
     }
   }
 }
