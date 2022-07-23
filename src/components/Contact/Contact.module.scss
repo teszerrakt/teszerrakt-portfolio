@@ -45,7 +45,7 @@
         @apply flex items-center justify-center;
         @apply px-10 py-3 text-xl;
         @apply rounded-lg cursor-pointer duration-300;
-        @apply hover:border-2 hover:border-white;
+        @apply hover:hue-rotate-60;
       }
     }
   }

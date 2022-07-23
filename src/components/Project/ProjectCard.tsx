@@ -1,7 +1,7 @@
 import styles from './ProjectCard.module.scss'
 import Button from '../_common/Button/Button'
-import {CgWebsite} from "react-icons/cg"
-import {BsGithub} from 'react-icons/bs'
+import { CgWebsite } from 'react-icons/cg'
+import { BsGithub } from 'react-icons/bs'
 import { IProject } from './Project'
 
 const ProjectCard = (props: IProject) => {

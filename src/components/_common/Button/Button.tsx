@@ -12,16 +12,16 @@ const Button = (props: IProps) => {
   const {
     url,
     icon,
-    text
+    text,
   } = props
 
   return (
     <a
       className={`${styles.button} bg-gradient`}
       href={url}
-      target="_blank"
+      target='_blank'
     >
-      {icon &&<i className={styles.icon}>{icon}</i> }
+      {icon && <i className={styles.icon}>{icon}</i>}
       {text}
     </a>
   )

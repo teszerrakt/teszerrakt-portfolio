@@ -8,7 +8,8 @@ const About = () => {
           ABOUT ME
         </div>
         <div className={styles.descriptionContainer}>
-          Hello, my name is <span className={`text-gradient ${styles.name}`}>Zaky Syihab Hatmoko</span>. I am a Frontend Engineer.
+          Hello, my name is <span className={`text-gradient ${styles.name}`}>Zaky Syihab Hatmoko</span>. I am a Frontend
+          Engineer.
           <br />
           I recently graduated from Computer Science Major at Universitas Gadjah Mada.
           <br />

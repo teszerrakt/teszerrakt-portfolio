@@ -1,0 +1,33 @@
+$bottom-distance: 4rem;
+$icon-gap: 6rem;
+
+.socialMedia, .socialMediaPopup {
+  @apply flex items-center justify-center;
+  @apply fixed right-[2rem] z-10;
+  @apply p-4 rounded-full;
+  @apply cursor-pointer shadow-2xl duration-300;
+  @apply hover:hue-rotate-60;
+
+  .icon {
+    @apply text-xl;
+  }
+
+  .label {
+    @apply absolute top-[60px] text-sm cursor-default;
+  }
+}
+
+.socialMedia {
+  bottom: $bottom-distance;
+}
+
+.socialMediaPopup {
+
+  &:first-child {
+    bottom: calc(#{$bottom-distance} + #{$icon-gap});
+  }
+
+  &:nth-child(2) {
+    bottom: calc(#{$bottom-distance} + 2 * #{$icon-gap});
+  }
+}
