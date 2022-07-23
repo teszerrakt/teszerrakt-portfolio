@@ -56,7 +56,7 @@ const SocialMedia = () => {
           {showPopup ?
             <CgClose className={`${(isHovered && !isClicked && isDesktop) ? 'rotate-45' : ''} duration-300`} />
             :
-            ICON_LIST[0].icon()
+            ICON_LIST[currentIconIndex].icon()
           }
         </i>
         <span className={styles.label}>
