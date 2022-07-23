@@ -1,7 +1,7 @@
 import { ReactNode, useEffect, useState } from 'react'
 import styles from './SocialMedia.module.scss'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
-import { CgClose } from 'react-icons/all'
+import { CgClose } from 'react-icons/cg'
 import { isDesktop } from 'react-device-detect'
 
 const ICON_LIST: { id: string, icon: any, link: string }[] = [
