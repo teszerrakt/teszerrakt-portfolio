@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section id='about' className={styles.aboutSection}>
       <div className={styles.contentContainer}>
-        <div className={`${styles.titleContainer} text-gradient`}>
+        <div className={`${styles.title} text-gradient`}>
           ABOUT ME
         </div>
         <div className={styles.descriptionContainer}>

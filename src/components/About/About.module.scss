@@ -6,10 +6,9 @@
     @apply grid max-w-5xl grid-cols-1;
     @apply py-10 border-t sm:grid-cols-2;
 
-    .titleContainer {
-      @apply flex items-center text-4xl;
-      @apply font-bold pb-11;
-      @apply sm:pb-0 sm:text-6xl;
+    .title {
+      @apply text-left text-4xl font-bold pb-11;
+      @apply sm:text-6xl;
     }
 
     .descriptionContainer {
