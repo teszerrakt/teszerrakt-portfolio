@@ -2,6 +2,7 @@ import { ReactNode, useEffect, useState } from 'react'
 import styles from './SocialMedia.module.scss'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import { CgClose } from 'react-icons/all'
+import { isDesktop } from 'react-device-detect'
 
 const ICON_LIST: { id: string, icon: any, link: string }[] = [
   {
@@ -47,13 +48,13 @@ const SocialMedia = () => {
       ))}
       <div
         className={`${styles.socialMedia} bg-gradient`}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={() => isDesktop ? setIsHovered(true) : {}}
+        onMouseLeave={() => isDesktop ? setIsHovered(false) : {}}
         onClick={handleClick}
       >
         <i className={styles.icon}>
           {showPopup ?
-            <CgClose className={`${(isHovered && !isClicked) ? 'rotate-45' : ''} duration-300`} />
+            <CgClose className={`${(isHovered && !isClicked && isDesktop) ? 'rotate-45' : ''} duration-300`} />
             :
             ICON_LIST[0].icon()
           }
