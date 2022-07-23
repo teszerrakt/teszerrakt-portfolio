@@ -5,7 +5,9 @@ const Footer = () => {
 
   return (
     <footer className={styles.footerSection}>
-      Made with ❤️ by Zaky Syihab Hatmoko {currentYear}
+      <span className={styles.footerText}>
+        Made with ❤️ by <span className='text-gradient'>Zaky Syihab Hatmoko</span> in {currentYear}
+      </span>
     </footer>
   )
 }

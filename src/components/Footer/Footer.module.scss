@@ -1,3 +1,10 @@
 .footerSection {
-  @apply py-4 px-10 bg-tz-darkgray ;
+  @apply flex justify-center px-10;
+  .footerText {
+    @apply w-[64rem] border-t py-4;
+
+    & > span {
+      @apply font-bold;
+    }
+  }
 }
