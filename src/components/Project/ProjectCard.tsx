@@ -11,10 +11,11 @@ const ProjectCard = (props: IProject) => {
     liveURL,
     githubURL,
     imgURL,
+    className = ''
   } = props
 
   return (
-    <div className={styles.projectCard}>
+    <div className={`${styles.projectCard} ${className}`}>
       <img src={imgURL} className={styles.image} alt={title} />
       <div className={`${styles.title} text-gradient`}>{title}</div>
       <div className={styles.tags}>{tags}</div>

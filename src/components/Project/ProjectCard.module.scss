@@ -2,8 +2,13 @@
   @apply p-5 rounded-xl bg-tz-darkgray;
   @apply hover:scale-110 duration-300;
 
+  // 640, 768, 1024, 1280, 1536
+  // 124, 162, 234, 256,
+
   .image {
     @apply rounded-lg;
+    @apply sm:w-full sm:object-cover sm:h-[124px];
+    @apply md:h-[162px] lg:h-[234px];
   }
 
   .title {
