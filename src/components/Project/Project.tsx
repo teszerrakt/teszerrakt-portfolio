@@ -1,6 +1,7 @@
 import styles from './Project.module.scss'
 import kappa from '../../../images/kappa.png'
 import portfolio from '../../../images/portfolio.png'
+import anico from '../../../images/anico.webp'
 import ProjectCard from './ProjectCard'
 
 export interface IProject {
@@ -9,6 +10,7 @@ export interface IProject {
   githubURL: string
   title: string
   tags: string
+  className?: string
 }
 
 const projectList: IProject[] = [
@@ -26,6 +28,14 @@ const projectList: IProject[] = [
     liveURL: 'https://zsyihab.tech',
     imgURL: portfolio,
   },
+  {
+    className: 'col-span-1 sm:col-span-2',
+    title: 'AniCo - Anime Collections',
+    tags: 'React, TypeScript, GraphQL, Emotion',
+    githubURL: 'https://github.com/teszerrakt/anime-collections',
+    liveURL: 'https://anico.zsyihab.tech',
+    imgURL: anico,
+  }
 ]
 
 const Project = () => {
@@ -39,6 +49,7 @@ const Project = () => {
           {projectList.map(project =>
             <ProjectCard
               key={project.title}
+              className={project.className}
               imgURL={project.imgURL}
               liveURL={project.liveURL}
               githubURL={project.githubURL}
