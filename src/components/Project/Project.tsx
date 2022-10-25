@@ -18,14 +18,14 @@ const projectList: IProject[] = [
     title: 'Kappa - Comic Recommender System',
     tags: 'React, Flask, TailwindCSS',
     githubURL: 'https://github.com/teszerrakt/kappa-comic-recommender',
-    liveURL: 'https://kappa.zsyihab.tech',
+    liveURL: 'https://kappa.zsyihab.codes',
     imgURL: kappa,
   },
   {
     title: 'Portfolio Website',
     tags: 'React, TypeScript, SCSS, TailwindCSS',
     githubURL: 'https://github.com/teszerrakt/teszerrakt-portfolio',
-    liveURL: 'https://zsyihab.tech',
+    liveURL: 'https://zsyihab.codes',
     imgURL: portfolio,
   },
   {
@@ -33,20 +33,18 @@ const projectList: IProject[] = [
     title: 'AniCo - Anime Collections',
     tags: 'React, TypeScript, GraphQL, Emotion',
     githubURL: 'https://github.com/teszerrakt/anime-collections',
-    liveURL: 'https://anico.zsyihab.tech',
+    liveURL: 'https://anico.zsyihab.codes',
     imgURL: anico,
-  }
+  },
 ]
 
 const Project = () => {
   return (
-    <section id='project' className={styles.projectSection}>
+    <section id="project" className={styles.projectSection}>
       <div className={styles.projectContainer}>
-        <div className={`${styles.title} text-gradient`}>
-          MY PROJECTS
-        </div>
+        <div className={`${styles.title} text-gradient`}>MY PROJECTS</div>
         <div className={styles.cardContainer}>
-          {projectList.map(project =>
+          {projectList.map((project) => (
             <ProjectCard
               key={project.title}
               className={project.className}
@@ -55,8 +53,8 @@ const Project = () => {
               githubURL={project.githubURL}
               title={project.title}
               tags={project.tags}
-            />,
-          )}
+            />
+          ))}
         </div>
       </div>
     </section>
