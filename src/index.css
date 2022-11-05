@@ -3,51 +3,64 @@
 @tailwind utilities;
 
 body {
-    @apply bg-tz-black text-white font-fjalla;
-    @apply overflow-x-hidden;
-    user-select: none;
+  @apply text-white bg-tz-black font-fjalla;
+  @apply overflow-x-hidden;
+  user-select: none;
 }
 
 .text-gradient {
-    color: transparent;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    animation: gradient 10s ease infinite;
+  color: transparent;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  animation: gradient 10s ease infinite;
 }
 
 .bg-gradient {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+.fade-in {
+  animation: fadeIn 5s ease;
 }
 
 @keyframes gradient {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @layer utilities {
-    .scrollbar::-webkit-scrollbar {
-        @apply w-2 h-2;
-    }
+  .scrollbar::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
 
-    .scrollbar::-webkit-scrollbar-track {
-        @apply bg-transparent;
-    }
+  .scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
 
-    .scrollbar::-webkit-scrollbar-thumb {
-        @apply bg-gradient-to-b from-tz-darkblue to-tz-lightblue;
-    }
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-tz-darkblue to-tz-lightblue;
+  }
 
-    .scrollbar::-webkit-scrollbar-thumb:hover {
-        @apply bg-gradient-to-b from-tz-red to-tz-orange;
-    }
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-gradient-to-b from-tz-red to-tz-orange;
+  }
 }

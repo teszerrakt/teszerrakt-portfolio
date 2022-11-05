@@ -1,4 +1,3 @@
-import './App.css'
 import Landing from './components/Landing/Landing'
 import About from './components/About/About'
 import Project from './components/Project/Project'
@@ -8,14 +7,14 @@ import SocialMedia from './components/SocialMedia/SocialMedia'
 
 function App() {
   return (
-    <div className='App'>
+    <main className="fade-in">
       <SocialMedia />
       <Landing />
       <About />
       <Project />
       <Contact />
       <Footer />
-    </div>
+    </main>
   )
 }
 

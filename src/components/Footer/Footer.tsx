@@ -6,7 +6,9 @@ const Footer = () => {
   return (
     <footer className={styles.footerSection}>
       <span className={styles.footerText}>
-        Made with ❤️ by <span className='text-gradient'>Zaky Syihab Hatmoko</span> in {currentYear}
+        Made with ❤️ by{' '}
+        <span className="text-gradient">Zaky Syihab Hatmoko</span> in{' '}
+        {currentYear}
       </span>
     </footer>
   )

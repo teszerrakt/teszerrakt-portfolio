@@ -1,7 +1,7 @@
 .footerSection {
   @apply flex justify-center px-10;
   .footerText {
-    @apply w-[64rem] border-t py-4;
+    @apply w-[64rem] border-t py-4 text-center;
 
     & > span {
       @apply font-bold;
