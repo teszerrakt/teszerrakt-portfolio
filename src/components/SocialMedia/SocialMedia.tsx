@@ -3,8 +3,9 @@ import styles from './SocialMedia.module.scss'
 import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import { CgClose } from 'react-icons/cg'
 import { isDesktop } from 'react-device-detect'
+import { AnimatePresence } from 'framer-motion'
 
-const ICON_LIST: { id: string, icon: any, link: string }[] = [
+const ICON_LIST: { id: string; icon: any; link: string }[] = [
   {
     id: 'Github',
     icon: BsGithub,
@@ -42,28 +43,36 @@ const SocialMedia = () => {
   }
 
   return (
-    <>
+    <AnimatePresence>
       {ICON_LIST.map(({ id, icon, link }) => (
-        <SocialMediaPopup key={id} icon={icon()} visible={showPopup} label={id} link={link} />
+        <SocialMediaPopup
+          key={id}
+          icon={icon()}
+          visible={showPopup}
+          label={id}
+          link={link}
+        />
       ))}
       <div
         className={`${styles.socialMedia} bg-gradient`}
-        onMouseEnter={() => isDesktop ? setIsHovered(true) : {}}
-        onMouseLeave={() => isDesktop ? setIsHovered(false) : {}}
+        onMouseEnter={() => (isDesktop ? setIsHovered(true) : {})}
+        onMouseLeave={() => (isDesktop ? setIsHovered(false) : {})}
         onClick={handleClick}
       >
         <i className={styles.icon}>
-          {showPopup ?
-            <CgClose className={`${(isHovered && !isClicked && isDesktop) ? 'rotate-45' : ''} duration-300`} />
-            :
+          {showPopup ? (
+            <CgClose
+              className={`${
+                isHovered && !isClicked && isDesktop ? 'rotate-45' : ''
+              } duration-300`}
+            />
+          ) : (
             ICON_LIST[currentIconIndex].icon()
-          }
+          )}
         </i>
-        <span className={styles.label}>
-          Connect
-        </span>
+        <span className={styles.label}>Connect</span>
       </div>
-    </>
+    </AnimatePresence>
   )
 }
 
@@ -74,12 +83,19 @@ interface ISocialMediaIconProps {
   link?: string
 }
 
-const SocialMediaPopup = ({ visible, icon, label, link }: ISocialMediaIconProps) => {
+const SocialMediaPopup = ({
+  visible,
+  icon,
+  label,
+  link,
+}: ISocialMediaIconProps) => {
   return (
     <a
-      className={`${styles.socialMediaPopup} ${visible ? '' : '!hidden'} bg-gradient`}
+      className={`${styles.socialMediaPopup} ${
+        visible ? '' : '!hidden'
+      } bg-gradient`}
       href={link || '#'}
-      target='_blank'
+      target="_blank"
     >
       <i className={styles.icon}>{icon}</i>
       <span className={styles.label}>{label}</span>
